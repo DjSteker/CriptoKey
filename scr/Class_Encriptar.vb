@@ -1,5 +1,11 @@
 
-    Friend Shared Function encriptar128BitRijndael(ByVal textoEncriptar As String, ByVal Contraseña As String) As String
+Imports System.Security.Cryptography
+Imports System.Text
+Imports System.IO
+
+Public Class Class_Encriptar
+
+Friend Shared Function encriptar128BitRijndael(ByVal textoEncriptar As String, ByVal Contraseña As String) As String
         Dim bytValue() As Byte
         Dim bytKey() As Byte
         Dim bytEncoded() As Byte = New Byte() {}
@@ -152,3 +158,5 @@
 
         Return textoSinNull
     End Function
+
+    End Class
