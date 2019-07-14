@@ -104,7 +104,7 @@ Partial Class Form_Lista1
         'Label_Tematica
         '
         Me.Label_Tematica.AutoSize = True
-        Me.Label_Tematica.Location = New System.Drawing.Point(29, 377)
+        Me.Label_Tematica.Location = New System.Drawing.Point(45, 377)
         Me.Label_Tematica.Name = "Label_Tematica"
         Me.Label_Tematica.Size = New System.Drawing.Size(51, 13)
         Me.Label_Tematica.TabIndex = 87
@@ -328,7 +328,7 @@ Partial Class Form_Lista1
         Me.Controls.Add(Me.TextBox_Id)
         Me.Controls.Add(Me.DataGridView_TablaValores)
         Me.Name = "Form_Lista1"
-        Me.Text = "Form_Lista1"
+        Me.Text = "Lista"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView_TablaValores, System.ComponentModel.ISupportInitialize).EndInit()
