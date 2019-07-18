@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Wapp_CriptoKeys
+</name>
+</assembly>
+<members>
+<member name="T:Wapp_CriptoKeys.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:Wapp_CriptoKeys.Class_Contadores.ObtenerColumnas(System.String,System.Int64)">
+ <summary>
+ Obtener las columnas del archivo y tabla
+ </summary>
+ <param name="Tabla">Nombre de la tabla</param>
+ <param name="Rejistro">Numero del rejistro a comprobar</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Wapp_CriptoKeys.Class_Datos.ObtenerColumnas(System.String,System.Int64)">
+ <summary>
+ Obtener las columnas del archivo y tabla
+ </summary>
+ <param name="Colunma">Nombre de la tabla</param>
+ <param name="Rejistros">Numero del rejistro a comprobar</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Wapp_CriptoKeys.Class_Configuraciones.ObtenerColumnas(System.String,System.Int64)">
+ <summary>
+ Obtener las columnas del archivo y tabla
+ </summary>
+ <param name="Tabla">Nombre de la tabla</param>
+ <param name="Rejistro">Numero del rejistro a comprobar</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
