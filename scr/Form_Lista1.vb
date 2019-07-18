@@ -109,6 +109,10 @@ Public Class Form_Lista1
         Try
 
 
+            If TextBox_Contraseña.Text.ToString.Trim = String.Empty Then
+                MsgBox(" Deve introducir una contraseña")
+                Exit Try
+            End If
 
             If Label_IDSeleccionada.Text <> "" Then
                 Dim MsgResponse As MsgBoxResult
@@ -164,6 +168,10 @@ Public Class Form_Lista1
         Dim IsSocioSelec As Integer
         Try
 
+            If TextBox_Contraseña.Text.ToString.Trim = String.Empty Then
+                MsgBox(" Deve introducir una contraseña")
+                Exit Try
+            End If
             If (Label_IDSeleccionada.Text.ToString.Trim <> "") Then
                 IsSocioSelec = CInt(Label_IDSeleccionada.Text)
                 If Class_Datos.ExisteId(IsSocioSelec) = False Then
