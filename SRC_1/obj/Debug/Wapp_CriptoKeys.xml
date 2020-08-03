@@ -1,0 +1,165 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Wapp_CriptoKeys
+</name>
+</assembly>
+<members>
+<member name="T:Wapp_CriptoKeys.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Wapp_CriptoKeys.My.Resources.Resource_Español">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.CheckBox_Activo">
+<summary>
+  Busca una cadena traducida similar a Activo.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.CheckBox_MostrarActivos">
+<summary>
+  Busca una cadena traducida similar a Mostrar activos.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Contraseña">
+<summary>
+  Busca una cadena traducida similar a Contraseña.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Descripcion">
+<summary>
+  Busca una cadena traducida similar a Descripción.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Id">
+<summary>
+  Busca una cadena traducida similar a Id.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Nombre">
+<summary>
+  Busca una cadena traducida similar a Nombre.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Tematica">
+<summary>
+  Busca una cadena traducida similar a Temática.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Valor">
+<summary>
+  Busca una cadena traducida similar a Valor.
+</summary>
+</member>
+<member name="T:Wapp_CriptoKeys.My.Resources.Resource_Ingles">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.CheckBox_Activo">
+<summary>
+  Busca una cadena traducida similar a Active.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.CheckBox_MostrarActivos">
+<summary>
+  Busca una cadena traducida similar a Show Assets.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Contraseña">
+<summary>
+  Busca una cadena traducida similar a Password.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Descripcion">
+<summary>
+  Busca una cadena traducida similar a Description.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Id">
+<summary>
+  Busca una cadena traducida similar a Id.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Nombre">
+<summary>
+  Busca una cadena traducida similar a Name.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Tematica">
+<summary>
+  Busca una cadena traducida similar a Theme.
+</summary>
+</member>
+<member name="P:Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Valor">
+<summary>
+  Busca una cadena traducida similar a Value.
+</summary>
+</member>
+<member name="M:Wapp_CriptoKeys.Class_Contadores.ObtenerColumnas(System.String,System.Int64)">
+ <summary>
+ Obtener las columnas del archivo y tabla
+ </summary>
+ <param name="Tabla">Nombre de la tabla</param>
+ <param name="Rejistro">Numero del rejistro a comprobar</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Wapp_CriptoKeys.Class_Datos.ObtenerColumnas(System.String,System.Int64)">
+ <summary>
+ Obtener las columnas del archivo y tabla
+ </summary>
+ <param name="Colunma">Nombre de la tabla</param>
+ <param name="Rejistros">Numero del rejistro a comprobar</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Wapp_CriptoKeys.Class_Configuraciones.ObtenerColumnas(System.String,System.Int64)">
+ <summary>
+ Obtener las columnas del archivo y tabla
+ </summary>
+ <param name="Tabla">Nombre de la tabla</param>
+ <param name="Rejistro">Numero del rejistro a comprobar</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,17 @@
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\bin\Debug\DB\Configuraciones.xml
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\bin\Debug\DB\Contadores.xml
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\bin\Debug\DB\DataBase.xml
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\bin\Debug\DB\Tematica.xml
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\bin\Debug\Wapp_CriptoKeys.exe
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\bin\Debug\Wapp_CriptoKeys.pdb
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\bin\Debug\Wapp_CriptoKeys.xml
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.Form_Lista1.resources
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.Resources.resources
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.Resource_Español.resources
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.Resource_Ingles.resources
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.vbproj.GenerateResource.cache
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.vbproj.CoreCompileInputs.cache
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.exe
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.xml
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.pdb
+C:\Users\ivanm\source\repos\Wapp_CriptoKeys\Wapp_CriptoKeys\obj\Debug\Wapp_CriptoKeys.vbprojAssemblyReference.cache
