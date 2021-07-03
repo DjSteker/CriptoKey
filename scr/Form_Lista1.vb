@@ -1,8 +1,9 @@
-Public Class Form_Lista1
+﻿Public Class Form_Lista1
 
     Private Sub Form_Lista1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Label_IDSeleccionada.Text = ""
+            ActulizarTematicas()
         Catch ex As Exception
 
         End Try
@@ -61,7 +62,7 @@ Public Class Form_Lista1
             TextBox_Descripcion.Text = ""
             TextBox_Nombre.Text = ""
             TextBox_Valor.Text = ""
-            TextBox_Tematica.Text = ""
+            ComboBox_Tematica.Text = ""
             CheckBox_Activo.Checked = True
             Label_IDSeleccionada.Text = ""
 
@@ -73,6 +74,29 @@ Public Class Form_Lista1
         End Try
 
     End Sub
+
+    Private Sub ActulizarTematicas()
+        Try
+            ComboBox_Tematica.Items.Clear()
+            With Class_Datos.ObtenerWhereActivos(CheckBox_Activo.Checked)
+                For Indice As Integer = 0 To (.Count - 1)
+                    Dim Encontrado As Boolean = False
+                    For IndiceTematica As Integer = 0 To (ComboBox_Tematica.Items.Count - 1)
+                        If ComboBox_Tematica.Items.Item(IndiceTematica) = Desencriptar(.Item(Indice).Tematica.Trim) Then
+                            Encontrado = True
+                            Exit For
+                        End If
+                    Next
+                    If Encontrado = False Then
+                        ComboBox_Tematica.Items.Add(Desencriptar(.Item(Indice).Tematica))
+                    End If
+                Next
+            End With
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
 
     Private Sub Tabla_SociosDataGridView_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView_TablaValores.CellContentClick
 
@@ -92,7 +116,7 @@ Public Class Form_Lista1
                 TextBox_Id.Text = CStr(DataGridView_TablaValores("C_Id", e.RowIndex).Value).ToString
                 TextBox_Nombre.Text = CStr(DataGridView_TablaValores("C_Nombre", e.RowIndex).Value).ToString
                 TextBox_Valor.Text = CStr(DataGridView_TablaValores("C_Valor", e.RowIndex).Value).ToString
-                TextBox_Tematica.Text = CStr(DataGridView_TablaValores("C_Temperatura", e.RowIndex).Value).ToString
+                ComboBox_Tematica.Text = CStr(DataGridView_TablaValores("C_Temperatura", e.RowIndex).Value).ToString
                 TextBox_Descripcion.Text = CStr(DataGridView_TablaValores("C_Descripcion", e.RowIndex).Value).ToString
                 CheckBox_Activo.Checked = CBool(DataGridView_TablaValores("C_Activo", e.RowIndex).Value)
                 Label_IDSeleccionada.Text = TextBox_Id.Text
@@ -107,12 +131,11 @@ Public Class Form_Lista1
 
     Private Sub Button_Agregar_Click(sender As System.Object, e As System.EventArgs) Handles Button_Agregar.Click
         Try
-
-
             If TextBox_Contraseña.Text.ToString.Trim = String.Empty Then
                 MsgBox(" Deve introducir una contraseña")
                 Exit Try
             End If
+
 
             If Label_IDSeleccionada.Text <> "" Then
                 Dim MsgResponse As MsgBoxResult
@@ -124,7 +147,6 @@ Public Class Form_Lista1
                     Exit Sub
                 End If
             End If
-
 
             If Class_Datos.Existe_Nombre(TextBox_Nombre.Text.Trim) Then
                 Dim MsgResponse As MsgBoxResult
@@ -144,7 +166,7 @@ Public Class Form_Lista1
             End If
 
             Dim RejistroNuevo As New Class_Datos.ClassArchivo_Datos(ContadorRejistros, Encriptar(TextBox_Nombre.Text.Trim),
-                                   Encriptar(TextBox_Valor.Text.Trim), Encriptar(TextBox_Tematica.Text.Trim), Encriptar(TextBox_Descripcion.Text.Trim), CheckBox_Activo.Checked)
+                                   Encriptar(TextBox_Valor.Text.Trim), Encriptar(ComboBox_Tematica.Text.Trim), Encriptar(TextBox_Descripcion.Text.Trim), CheckBox_Activo.Checked)
 
             Class_Datos.InsertarRejistro(RejistroNuevo)
             If Class_Datos.ExisteId(ContadorRejistros) Then
@@ -159,6 +181,11 @@ Public Class Form_Lista1
             DataGridView_TablaValores.ClearSelection()
 
 
+
+
+
+            ActulizarTematicas()
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -167,11 +194,11 @@ Public Class Form_Lista1
     Private Sub Button_Guardar_Click(sender As System.Object, e As System.EventArgs) Handles Button_Guardar.Click
         Dim IsSocioSelec As Integer
         Try
-
             If TextBox_Contraseña.Text.ToString.Trim = String.Empty Then
                 MsgBox(" Deve introducir una contraseña")
                 Exit Try
             End If
+
             If (Label_IDSeleccionada.Text.ToString.Trim <> "") Then
                 IsSocioSelec = CInt(Label_IDSeleccionada.Text)
                 If Class_Datos.ExisteId(IsSocioSelec) = False Then
@@ -189,7 +216,7 @@ Public Class Form_Lista1
         Try
 
             Dim SocioTemp As New Class_Datos.ClassArchivo_Datos(IsSocioSelec, Encriptar(TextBox_Nombre.Text.Trim),
-                                     Encriptar(TextBox_Valor.Text.Trim), Encriptar(TextBox_Tematica.Text.Trim), Encriptar(TextBox_Descripcion.Text.Trim), CheckBox_Activo.Checked)
+                                     Encriptar(TextBox_Valor.Text.Trim), Encriptar(ComboBox_Tematica.Text.Trim), Encriptar(TextBox_Descripcion.Text.Trim), CheckBox_Activo.Checked)
 
             Class_Datos.ModificarRejistro(IsSocioSelec, SocioTemp)
 
@@ -244,4 +271,56 @@ Public Class Form_Lista1
         End Try
     End Sub
 
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_Lenguaje.SelectedIndexChanged
+        Try
+            If ComboBox_Lenguaje.Text = "Castellano" Then
+                System.Threading.Thread.CurrentThread.CurrentUICulture = New Globalization.CultureInfo("Es")
+                Cultura_Es()
+            ElseIf ComboBox_Lenguaje.Text = "English" Then
+                System.Threading.Thread.CurrentThread.CurrentUICulture = New Globalization.CultureInfo("En")
+                Cultura_En
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Cultura_Es()
+        Label_Id.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Id
+        Label_Nombre.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Nombre
+        Label_Valor.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Valor
+        Label_Tematica.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Tematica
+        Label_Descripcion.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Descripcion
+        Label_Contraseña.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Label_Contraseña
+        CheckBox_Activo.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.CheckBox_Activo
+        CheckBox_MostrarActivos.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.CheckBox_MostrarActivos
+        Button_InicioContraseña.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Button_InicioContraseña
+        CheckBox_OcultarContraseña.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.CheckBox_OcultarContraseña
+        Button_Agregar.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Button_Agregar
+        Button_Guardar.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Button_Guardar
+        Button_Eliminar.Text = Wapp_CriptoKeys.My.Resources.Resource_Español.Button_Eliminar
+    End Sub
+    Private Sub Cultura_En()
+        Label_Id.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Id
+        Label_Nombre.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Nombre
+        Label_Valor.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Valor
+        Label_Tematica.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Tematica
+        Label_Descripcion.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Descripcion
+        Label_Contraseña.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Label_Contraseña
+        CheckBox_Activo.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.CheckBox_Activo
+        CheckBox_MostrarActivos.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.CheckBox_MostrarActivos
+        Button_InicioContraseña.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Button_InicioContraseña
+        CheckBox_OcultarContraseña.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.CheckBox_OcultarContraseña
+        Button_Agregar.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Button_Agregar
+        Button_Guardar.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Button_Guardar
+        Button_Eliminar.Text = Wapp_CriptoKeys.My.Resources.Resource_Ingles.Button_Eliminar
+    End Sub
+
+    Private Sub Button_InicioContraseña_Click(sender As Object, e As EventArgs) Handles Button_InicioContraseña.Click
+        Try
+            ActulizarTematicas()
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

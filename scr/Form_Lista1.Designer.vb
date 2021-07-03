@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form_Lista1
     Inherits System.Windows.Forms.Form
 
@@ -23,10 +23,10 @@ Partial Class Form_Lista1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button_InicioContraseña = New System.Windows.Forms.Button()
         Me.TextBox_Contraseña = New System.Windows.Forms.TextBox()
         Me.Label_Contraseña = New System.Windows.Forms.Label()
         Me.CheckBox_MostrarActivos = New System.Windows.Forms.CheckBox()
-        Me.TextBox_Tematica = New System.Windows.Forms.TextBox()
         Me.Label_Tematica = New System.Windows.Forms.Label()
         Me.Button_LimpiarCampos = New System.Windows.Forms.Button()
         Me.RichTextBox_Sucesos = New System.Windows.Forms.RichTextBox()
@@ -46,24 +46,37 @@ Partial Class Form_Lista1
         Me.C_Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C_Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C_Valor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C_Temperatura = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.C_Tematica = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C_Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C_Activo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label_IDSeleccionada = New System.Windows.Forms.Label()
+        Me.ComboBox_Lenguaje = New System.Windows.Forms.ComboBox()
+        Me.ComboBox_Tematica = New System.Windows.Forms.ComboBox()
+        Me.CheckBox_OcultarContraseña = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView_TablaValores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CheckBox_OcultarContraseña)
+        Me.GroupBox1.Controls.Add(Me.Button_InicioContraseña)
         Me.GroupBox1.Controls.Add(Me.TextBox_Contraseña)
         Me.GroupBox1.Controls.Add(Me.Label_Contraseña)
         Me.GroupBox1.Location = New System.Drawing.Point(31, 474)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(306, 75)
+        Me.GroupBox1.Size = New System.Drawing.Size(458, 75)
         Me.GroupBox1.TabIndex = 90
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = ""
+        '
+        'Button_InicioContraseña
+        '
+        Me.Button_InicioContraseña.Location = New System.Drawing.Point(273, 30)
+        Me.Button_InicioContraseña.Name = "Button_InicioContraseña"
+        Me.Button_InicioContraseña.Size = New System.Drawing.Size(49, 20)
+        Me.Button_InicioContraseña.TabIndex = 2
+        Me.Button_InicioContraseña.Text = "Iniciar"
+        Me.Button_InicioContraseña.UseVisualStyleBackColor = True
         '
         'TextBox_Contraseña
         '
@@ -94,21 +107,15 @@ Partial Class Form_Lista1
         Me.CheckBox_MostrarActivos.Text = "Mostrar activos"
         Me.CheckBox_MostrarActivos.UseVisualStyleBackColor = True
         '
-        'TextBox_Tematica
-        '
-        Me.TextBox_Tematica.Location = New System.Drawing.Point(102, 374)
-        Me.TextBox_Tematica.Name = "TextBox_Tematica"
-        Me.TextBox_Tematica.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox_Tematica.TabIndex = 88
-        '
         'Label_Tematica
         '
-        Me.Label_Tematica.AutoSize = True
-        Me.Label_Tematica.Location = New System.Drawing.Point(45, 377)
+        Me.Label_Tematica.Location = New System.Drawing.Point(40, 377)
+        Me.Label_Tematica.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label_Tematica.Name = "Label_Tematica"
         Me.Label_Tematica.Size = New System.Drawing.Size(51, 13)
         Me.Label_Tematica.TabIndex = 87
         Me.Label_Tematica.Text = "Tematica"
+        Me.Label_Tematica.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Button_LimpiarCampos
         '
@@ -177,6 +184,7 @@ Partial Class Form_Lista1
         'TextBox_Descripcion
         '
         Me.TextBox_Descripcion.Location = New System.Drawing.Point(102, 400)
+        Me.TextBox_Descripcion.Margin = New System.Windows.Forms.Padding(1)
         Me.TextBox_Descripcion.Multiline = True
         Me.TextBox_Descripcion.Name = "TextBox_Descripcion"
         Me.TextBox_Descripcion.Size = New System.Drawing.Size(173, 52)
@@ -184,59 +192,66 @@ Partial Class Form_Lista1
         '
         'Label_Descripcion
         '
-        Me.Label_Descripcion.AutoSize = True
-        Me.Label_Descripcion.Location = New System.Drawing.Point(33, 403)
+        Me.Label_Descripcion.Location = New System.Drawing.Point(28, 403)
+        Me.Label_Descripcion.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label_Descripcion.Name = "Label_Descripcion"
         Me.Label_Descripcion.Size = New System.Drawing.Size(63, 13)
         Me.Label_Descripcion.TabIndex = 79
         Me.Label_Descripcion.Text = "Descripcion"
+        Me.Label_Descripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TextBox_Valor
         '
         Me.TextBox_Valor.Location = New System.Drawing.Point(102, 348)
+        Me.TextBox_Valor.Margin = New System.Windows.Forms.Padding(1)
         Me.TextBox_Valor.Name = "TextBox_Valor"
         Me.TextBox_Valor.Size = New System.Drawing.Size(173, 20)
         Me.TextBox_Valor.TabIndex = 78
         '
         'Label_Valor
         '
-        Me.Label_Valor.AutoSize = True
-        Me.Label_Valor.Location = New System.Drawing.Point(65, 351)
+        Me.Label_Valor.Location = New System.Drawing.Point(60, 351)
+        Me.Label_Valor.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label_Valor.Name = "Label_Valor"
         Me.Label_Valor.Size = New System.Drawing.Size(31, 13)
         Me.Label_Valor.TabIndex = 77
         Me.Label_Valor.Text = "Valor"
+        Me.Label_Valor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TextBox_Nombre
         '
         Me.TextBox_Nombre.Location = New System.Drawing.Point(102, 322)
+        Me.TextBox_Nombre.Margin = New System.Windows.Forms.Padding(1)
         Me.TextBox_Nombre.Name = "TextBox_Nombre"
         Me.TextBox_Nombre.Size = New System.Drawing.Size(173, 20)
         Me.TextBox_Nombre.TabIndex = 76
         '
         'Label_Nombre
         '
-        Me.Label_Nombre.AutoSize = True
-        Me.Label_Nombre.Location = New System.Drawing.Point(52, 325)
+        Me.Label_Nombre.Location = New System.Drawing.Point(47, 325)
+        Me.Label_Nombre.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label_Nombre.Name = "Label_Nombre"
         Me.Label_Nombre.Size = New System.Drawing.Size(44, 13)
         Me.Label_Nombre.TabIndex = 75
         Me.Label_Nombre.Text = "Nombre"
+        Me.Label_Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label_Id
         '
-        Me.Label_Id.AutoSize = True
         Me.Label_Id.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label_Id.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label_Id.Location = New System.Drawing.Point(80, 299)
+        Me.Label_Id.Location = New System.Drawing.Point(75, 299)
+        Me.Label_Id.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label_Id.Name = "Label_Id"
         Me.Label_Id.Size = New System.Drawing.Size(16, 13)
         Me.Label_Id.TabIndex = 74
         Me.Label_Id.Text = "Id"
+        Me.Label_Id.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TextBox_Id
         '
         Me.TextBox_Id.Location = New System.Drawing.Point(102, 296)
+        Me.TextBox_Id.Margin = New System.Windows.Forms.Padding(1)
         Me.TextBox_Id.Name = "TextBox_Id"
         Me.TextBox_Id.Size = New System.Drawing.Size(173, 20)
         Me.TextBox_Id.TabIndex = 73
@@ -247,7 +262,7 @@ Partial Class Form_Lista1
         Me.DataGridView_TablaValores.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView_TablaValores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView_TablaValores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.C_Id, Me.C_Nombre, Me.C_Valor, Me.C_Temperatura, Me.C_Descripcion, Me.C_Activo})
+        Me.DataGridView_TablaValores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.C_Id, Me.C_Nombre, Me.C_Valor, Me.C_Tematica, Me.C_Descripcion, Me.C_Activo})
         Me.DataGridView_TablaValores.Location = New System.Drawing.Point(31, 12)
         Me.DataGridView_TablaValores.Name = "DataGridView_TablaValores"
         Me.DataGridView_TablaValores.Size = New System.Drawing.Size(740, 248)
@@ -274,15 +289,15 @@ Partial Class Form_Lista1
         Me.C_Valor.Name = "C_Valor"
         Me.C_Valor.Width = 150
         '
-        'C_Temperatura
+        'C_Tematica
         '
-        Me.C_Temperatura.HeaderText = "Temperatura"
-        Me.C_Temperatura.Name = "C_Temperatura"
+        Me.C_Tematica.HeaderText = "Temática"
+        Me.C_Tematica.Name = "C_Tematica"
         '
         'C_Descripcion
         '
         Me.C_Descripcion.FillWeight = 400.0!
-        Me.C_Descripcion.HeaderText = "Descripcion"
+        Me.C_Descripcion.HeaderText = "Descripción"
         Me.C_Descripcion.Name = "C_Descripcion"
         Me.C_Descripcion.Width = 200
         '
@@ -302,15 +317,44 @@ Partial Class Form_Lista1
         Me.Label_IDSeleccionada.TabIndex = 91
         Me.Label_IDSeleccionada.Text = "-"
         '
+        'ComboBox_Lenguaje
+        '
+        Me.ComboBox_Lenguaje.FormattingEnabled = True
+        Me.ComboBox_Lenguaje.Items.AddRange(New Object() {"Castellano", "English"})
+        Me.ComboBox_Lenguaje.Location = New System.Drawing.Point(667, 528)
+        Me.ComboBox_Lenguaje.Name = "ComboBox_Lenguaje"
+        Me.ComboBox_Lenguaje.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox_Lenguaje.TabIndex = 92
+        '
+        'ComboBox_Tematica
+        '
+        Me.ComboBox_Tematica.FormattingEnabled = True
+        Me.ComboBox_Tematica.Location = New System.Drawing.Point(102, 373)
+        Me.ComboBox_Tematica.Margin = New System.Windows.Forms.Padding(1)
+        Me.ComboBox_Tematica.Name = "ComboBox_Tematica"
+        Me.ComboBox_Tematica.Size = New System.Drawing.Size(173, 21)
+        Me.ComboBox_Tematica.TabIndex = 93
+        '
+        'CheckBox_OcultarContraseña
+        '
+        Me.CheckBox_OcultarContraseña.AutoSize = True
+        Me.CheckBox_OcultarContraseña.Location = New System.Drawing.Point(329, 32)
+        Me.CheckBox_OcultarContraseña.Name = "CheckBox_OcultarContraseña"
+        Me.CheckBox_OcultarContraseña.Size = New System.Drawing.Size(116, 17)
+        Me.CheckBox_OcultarContraseña.TabIndex = 3
+        Me.CheckBox_OcultarContraseña.Text = "Ocultar contraseña"
+        Me.CheckBox_OcultarContraseña.UseVisualStyleBackColor = True
+        '
         'Form_Lista1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 561)
+        Me.Controls.Add(Me.ComboBox_Tematica)
+        Me.Controls.Add(Me.ComboBox_Lenguaje)
         Me.Controls.Add(Me.Label_IDSeleccionada)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CheckBox_MostrarActivos)
-        Me.Controls.Add(Me.TextBox_Tematica)
         Me.Controls.Add(Me.Label_Tematica)
         Me.Controls.Add(Me.Button_LimpiarCampos)
         Me.Controls.Add(Me.RichTextBox_Sucesos)
@@ -341,7 +385,6 @@ Partial Class Form_Lista1
     Friend WithEvents TextBox_Contraseña As TextBox
     Friend WithEvents Label_Contraseña As Label
     Friend WithEvents CheckBox_MostrarActivos As CheckBox
-    Friend WithEvents TextBox_Tematica As TextBox
     Friend WithEvents Label_Tematica As Label
     Friend WithEvents Button_LimpiarCampos As Button
     Friend WithEvents RichTextBox_Sucesos As RichTextBox
@@ -358,11 +401,15 @@ Partial Class Form_Lista1
     Friend WithEvents Label_Id As Label
     Friend WithEvents TextBox_Id As TextBox
     Friend WithEvents DataGridView_TablaValores As DataGridView
+    Friend WithEvents Label_IDSeleccionada As Label
     Friend WithEvents C_Id As DataGridViewTextBoxColumn
     Friend WithEvents C_Nombre As DataGridViewTextBoxColumn
     Friend WithEvents C_Valor As DataGridViewTextBoxColumn
-    Friend WithEvents C_Temperatura As DataGridViewTextBoxColumn
+    Friend WithEvents C_Tematica As DataGridViewTextBoxColumn
     Friend WithEvents C_Descripcion As DataGridViewTextBoxColumn
     Friend WithEvents C_Activo As DataGridViewTextBoxColumn
-    Friend WithEvents Label_IDSeleccionada As Label
+    Friend WithEvents ComboBox_Lenguaje As ComboBox
+    Friend WithEvents ComboBox_Tematica As ComboBox
+    Friend WithEvents Button_InicioContraseña As Button
+    Friend WithEvents CheckBox_OcultarContraseña As CheckBox
 End Class
