@@ -137,7 +137,7 @@
                 TextBox_Id.Text = CStr(DataGridView_TablaValores("C_Id", e.RowIndex).Value).ToString
                 TextBox_Nombre.Text = CStr(DataGridView_TablaValores("C_Nombre", e.RowIndex).Value).ToString
                 TextBox_Valor.Text = CStr(DataGridView_TablaValores("C_Valor", e.RowIndex).Value).ToString
-                ComboBox_Tematica.Text = CStr(DataGridView_TablaValores("C_Temperatura", e.RowIndex).Value).ToString
+                ComboBox_Tematica.Text = CStr(DataGridView_TablaValores("C_Tematica", e.RowIndex).Value).ToString
                 TextBox_Descripcion.Text = CStr(DataGridView_TablaValores("C_Descripcion", e.RowIndex).Value).ToString
                 CheckBox_Activo.Checked = CBool(DataGridView_TablaValores("C_Activo", e.RowIndex).Value)
                 Label_IDSeleccionada.Text = TextBox_Id.Text
