@@ -360,6 +360,7 @@
 
     Private Sub Button_InicioContraseña_Click(sender As Object, e As EventArgs) Handles Button_InicioContraseña.Click
         Try
+            ActulizaFormularioActivos()
             ActulizarTematicas()
         Catch ex As Exception
 
